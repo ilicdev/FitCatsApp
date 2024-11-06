@@ -10,12 +10,13 @@ import Firebase
 
 @main
 struct FitCatsApp: App {
+    
     init() {
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

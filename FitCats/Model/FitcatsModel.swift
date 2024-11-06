@@ -1,7 +1,7 @@
 import Foundation
 import FirebaseFirestore
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     var id: String = UUID().uuidString
     var username: String
     var email: String
@@ -29,7 +29,7 @@ struct Rank: Codable {
     var maxSteps: Int
 }
 
-struct League: Codable {
+struct League: Codable, Identifiable {
     var id: String = UUID().uuidString
     var name: String
     var startDate: Date
@@ -45,3 +45,5 @@ struct Statistics: Codable {
     var ranks: [String] // Store Rank IDs
     var bestRank: String // Store Best Rank ID
 }
+
+

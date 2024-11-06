@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9732644E2CD3518C002C8ECE /* LeagueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732644D2CD3518C002C8ECE /* LeagueDetailView.swift */; };
+		973264502CD3ABA3002C8ECE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732644F2CD3ABA3002C8ECE /* RootView.swift */; };
 		9745F3E22C6393EA0068F3AC /* FitCatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3E12C6393EA0068F3AC /* FitCatsApp.swift */; };
-		9745F3E42C6393EA0068F3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3E32C6393EA0068F3AC /* ContentView.swift */; };
 		9745F3E62C6393EB0068F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9745F3E52C6393EB0068F3AC /* Assets.xcassets */; };
 		9745F3E92C6393EB0068F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9745F3E82C6393EB0068F3AC /* Preview Assets.xcassets */; };
 		9745F3F12C63978A0068F3AC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3F02C63978A0068F3AC /* OnboardingView.swift */; };
@@ -16,6 +17,12 @@
 		9745F3F52C6398870068F3AC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3F42C6398870068F3AC /* SignUpView.swift */; };
 		9745F3FB2C639AEE0068F3AC /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3FA2C639AEE0068F3AC /* CircularProgressView.swift */; };
 		9745F3FD2C639B4A0068F3AC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745F3FC2C639B4A0068F3AC /* ProgressView.swift */; };
+		974BDF912CD030E2004CA02F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974BDF902CD030E2004CA02F /* HomeView.swift */; };
+		974BDF932CD03139004CA02F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974BDF922CD03139004CA02F /* DashboardView.swift */; };
+		978D57642CD032BC0009C361 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57632CD032BC0009C361 /* AboutView.swift */; };
+		978D57662CD033000009C361 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57652CD033000009C361 /* FriendsView.swift */; };
+		978D57682CD0330F0009C361 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57672CD0330F0009C361 /* ProfileView.swift */; };
+		978D576A2CD033280009C361 /* LeaguesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57692CD033280009C361 /* LeaguesView.swift */; };
 		9791F7062CAA70470081F7B8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9791F7052CAA70470081F7B8 /* FirebaseAuth */; };
 		9791F7082CAA70470081F7B8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9791F7072CAA70470081F7B8 /* FirebaseDatabase */; };
 		9791F70A2CAA70470081F7B8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9791F7092CAA70470081F7B8 /* FirebaseFirestore */; };
@@ -27,9 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9732644D2CD3518C002C8ECE /* LeagueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailView.swift; sourceTree = "<group>"; };
+		9732644F2CD3ABA3002C8ECE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9745F3DE2C6393EA0068F3AC /* FitCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9745F3E12C6393EA0068F3AC /* FitCatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCatsApp.swift; sourceTree = "<group>"; };
-		9745F3E32C6393EA0068F3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9745F3E52C6393EB0068F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9745F3E82C6393EB0068F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9745F3F02C63978A0068F3AC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -37,6 +45,12 @@
 		9745F3F42C6398870068F3AC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		9745F3FA2C639AEE0068F3AC /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		9745F3FC2C639B4A0068F3AC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		974BDF902CD030E2004CA02F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		974BDF922CD03139004CA02F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		978D57632CD032BC0009C361 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		978D57652CD033000009C361 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		978D57672CD0330F0009C361 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		978D57692CD033280009C361 /* LeaguesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesView.swift; sourceTree = "<group>"; };
 		9791F7022CAA6CD50081F7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9791F7032CAA6E610081F7B8 /* FitCats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitCats.entitlements; sourceTree = "<group>"; };
 		9791F70D2CAA71230081F7B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +117,7 @@
 		9745F3EF2C63976D0068F3AC /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9745F3F02C63978A0068F3AC /* OnboardingView.swift */,
 				9745F3F22C63987C0068F3AC /* SignInView.swift */,
 				9745F3F42C6398870068F3AC /* SignUpView.swift */,
 			);
@@ -114,6 +129,7 @@
 			children = (
 				9745F3FA2C639AEE0068F3AC /* CircularProgressView.swift */,
 				9745F3FC2C639B4A0068F3AC /* ProgressView.swift */,
+				974BDF922CD03139004CA02F /* DashboardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -121,10 +137,15 @@
 		97A653BE2C6D0D5D00B21795 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9745F3E32C6393EA0068F3AC /* ContentView.swift */,
-				9745F3F02C63978A0068F3AC /* OnboardingView.swift */,
-				9745F3F92C639ACF0068F3AC /* Home */,
+				9732644F2CD3ABA3002C8ECE /* RootView.swift */,
+				974BDF902CD030E2004CA02F /* HomeView.swift */,
 				9745F3EF2C63976D0068F3AC /* Login */,
+				9745F3F92C639ACF0068F3AC /* Home */,
+				978D57632CD032BC0009C361 /* AboutView.swift */,
+				978D57652CD033000009C361 /* FriendsView.swift */,
+				978D57672CD0330F0009C361 /* ProfileView.swift */,
+				978D57692CD033280009C361 /* LeaguesView.swift */,
+				9732644D2CD3518C002C8ECE /* LeagueDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,14 +247,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978D57662CD033000009C361 /* FriendsView.swift in Sources */,
 				9745F3F12C63978A0068F3AC /* OnboardingView.swift in Sources */,
+				9732644E2CD3518C002C8ECE /* LeagueDetailView.swift in Sources */,
+				973264502CD3ABA3002C8ECE /* RootView.swift in Sources */,
+				974BDF932CD03139004CA02F /* DashboardView.swift in Sources */,
 				9745F3F52C6398870068F3AC /* SignUpView.swift in Sources */,
-				9745F3E42C6393EA0068F3AC /* ContentView.swift in Sources */,
+				978D57642CD032BC0009C361 /* AboutView.swift in Sources */,
 				9745F3F32C63987C0068F3AC /* SignInView.swift in Sources */,
+				978D57682CD0330F0009C361 /* ProfileView.swift in Sources */,
 				97A653C22C6D0DBC00B21795 /* FitcatsModel.swift in Sources */,
+				974BDF912CD030E2004CA02F /* HomeView.swift in Sources */,
 				9745F3FD2C639B4A0068F3AC /* ProgressView.swift in Sources */,
 				9791F7102CAA7B4B0081F7B8 /* FirebaseUploader.swift in Sources */,
 				9791F7122CAA7F450081F7B8 /* FitCatsViewModel.swift in Sources */,
+				978D576A2CD033280009C361 /* LeaguesView.swift in Sources */,
 				9745F3FB2C639AEE0068F3AC /* CircularProgressView.swift in Sources */,
 				9745F3E22C6393EA0068F3AC /* FitCatsApp.swift in Sources */,
 			);

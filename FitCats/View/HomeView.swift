@@ -9,45 +9,61 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = FitCatsViewModel()
+    @ObservedObject var viewModel: FitCatsViewModel
     
     var body: some View {
         TabView {
-            // About View Placeholder
-            AboutView()
-                .tabItem {
-                    Image(systemName: "pawprint.fill")
-                    Text("About")
-                }
-
-            // Leagues View Placeholder
-            LeaguesView()
-                .tabItem {
-                    Image(systemName: "trophy.fill")
-                    Text("Leagues")
-                }
-
-            // Home (Dashboard) View
-            DashboardView(viewModel: viewModel)
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
+            NavigationStack {
+                DashboardView(viewModel: viewModel)
+            }
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+            }
             
-            // Friends View Placeholder
-            FriendsView()
-                .tabItem {
-                    Image(systemName: "person.2.fill")
-                    Text("Friends")
+            NavigationStack {
+                AboutView()
+            }
+            .tabItem {
+                Image(systemName: "pawprint.fill")
+                Text("About")
+            }
+            
+            NavigationStack {
+                LeaguesView(viewModel: viewModel)
+            }
+            .tabItem {
+                Image(systemName: "trophy.fill")
+                Text("Leagues")
+            }
+            
+            NavigationStack {
+                FriendsView(viewModel: viewModel)
+            }
+            .tabItem {
+                Image(systemName: "person.2.fill")
+                Text("Friends")
+                
+            }
+            
+            NavigationStack {
+                if let user = viewModel.currentUser {
+                    ProfileView(viewModel: viewModel, isUserSignedIn: $viewModel.isSignedIn, user: user)
+                } else {
+                    Text("Loading Profile...")
                 }
-
-            // Profile View Placeholder
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+            }
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Profile")
+            }
+        }
+        .onAppear {
+            viewModel.fetchLeagues()
+            // Fetch leagues data when HomeView appears
         }
     }
 }
+
+
 

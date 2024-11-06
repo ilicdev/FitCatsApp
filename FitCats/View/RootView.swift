@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct RootView: View {
+    @StateObject var viewModel = FitCatsViewModel()
+
+    var body: some View {
+        if viewModel.isSignedIn {
+            HomeView(viewModel: viewModel)
+        } else {
+            OnboardingView(viewModel: viewModel)
+        }
+    }
+}

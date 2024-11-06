@@ -8,75 +8,65 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @AppStorage("isSignedIn") var isSignedIn: Bool = false
+    @StateObject var viewModel = FitCatsViewModel()
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
-    
+    @State private var showError = false
+    @State private var errorMessage = ""
+
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {
-                    // Action for back button
-                }) {
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(.black)
-                        .padding()
-                }
-                Spacer()
-            }
-            
-            Spacer()
-            
             Text("Create new Account")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom, 20)
-            
-            Image(systemName: "cat")
+
+            Image("catImage") // Replace with your cat image
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
                 .padding(.bottom, 20)
-            
-            VStack(alignment: .leading, spacing: 15) {
-                Text("Username")
-                    .font(.headline)
-                
-                TextField("Enter your username", text: $username)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                
-                Text("Email")
-                    .font(.headline)
-                
-                TextField("Enter your email", text: $email)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                
-                Text("Password")
-                    .font(.headline)
-                
-                SecureField("Enter your password", text: $password)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                
-                Text("Confirm password")
-                    .font(.headline)
-                
-                SecureField("Confirm your password", text: $confirmPassword)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-            }
-            .padding(.horizontal)
-            
-            Button(action: {
-                // Action for "Sign Up"
-            }) {
+
+            TextField("Username", text: $username)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+
+            TextField("Email", text: $email)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+
+            SecureField("Password", text: $password)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+
+            SecureField("Confirm Password", text: $confirmPassword)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+
+            Button {
+                guard password == confirmPassword else {
+                    showError = true
+                    errorMessage = "Passwords do not match"
+                    return
+                }
+
+                viewModel.signUp(username: username, email: email, password: password) { error in
+                    if let error = error {
+                        showError = true
+                        errorMessage = error
+                    } else {
+                        isSignedIn = true
+                        UserDefaults.standard.set(true, forKey: "isSignedIn")
+                    }
+                }
+            } label: {
                 Text("Sign Up")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -85,17 +75,17 @@ struct SignUpView: View {
                     .background(Color.brown)
                     .cornerRadius(10)
             }
-            .padding(.horizontal)
-            .padding(.top, 20)
-            
-            Spacer()
+            .padding()
+
+            if showError {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
         }
         .padding()
-        .background(Color.white)
     }
 }
 
-#Preview {
-    SignUpView()
-}
+
 
